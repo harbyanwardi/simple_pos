@@ -28,9 +28,9 @@
                 </li>
                 <li><a href="<?php echo base_url().'admin/jurnal'?>">Jurnal</a>
                 <hr>
-                <li style="color:red">LAPORAN</li>
+               <!--  <li style="color:red">LAPORAN</li>
                 <li><a href="<?php echo base_url().'admin/laporan'?>">Laporan</a>
-                </li>
+                </li> -->
                 </li>
                 <!-- <li><a href="<?php echo base_url().'admin/grafik'?>">Grafik</a>
                 </li> -->
@@ -39,10 +39,7 @@
                 </li>
                 <?php }?>
                 <?php if($h=='2'){ ?>
-                <li><a href="<?php echo base_url().'admin/penjualan_grosir'?>">Transaksi Penjualan</a>
-                </li>
-                <li><a href="<?php echo base_url().'admin/retur'?>">Retur Penjualan</a>
-                </li>
+                <li><a href="<?php echo base_url().'welcome'?>">LAPORAN</a>
                 <li><a href="<?php echo base_url().'administrator/logout'?>">Keluar</a>
                 </li>
                 <?php }?>

@@ -51,8 +51,8 @@
                   <img src="<?php echo base_url().'assets/img/lap.jpg'?>" alt="...">
                   <div class="caption">
                   <h3>Laporan Barang</h3>
-                  <p>PT. NEW RMK</p>
-                  <p><a href="http://localhost/newrmk/admin/laporan/lap_data_barang" target="_blank" class="btn btn-primary" role="button">LIHAT</a></p>
+                  <p>Addesia Jaya</p> 
+                  <p><a href="<?php echo base_url().'admin/laporan/lap_data_barang'?>" target="_blank" class="btn btn-primary" role="button">LIHAT</a></p>
                   </div>
             </div>
             </div>
@@ -61,8 +61,8 @@
                   <img src="<?php echo base_url().'assets/img/gra.jpg'?>" alt="...">
                   <div class="caption">
                   <h3>Grafik Stok Barang</h3>
-                  <p>PT. NEW RMK</p>
-                  <p><a href="http://localhost/newrmk/admin/grafik/graf_stok_barang" target="_blank" class="btn btn-primary" role="button">LIHAT</a></p>
+                  <p>Addesia Jaya</p> 
+                  <p><a href="<?php echo base_url().'admin/grafik/graf_stok_barang'?>" target="_blank" class="btn btn-primary" role="button">LIHAT</a></p>
                   </div>
             </div>
             </div>
@@ -71,8 +71,8 @@
                   <img src="<?php echo base_url().'assets/img/unt.jpg'?>" alt="...">
                   <div class="caption">
                   <h3>Laporan Penjualan</h3>
-                  <p>PT. NEW RMK</p>
-                  <p><a href="http://localhost/newrmk/admin/laporan/lap_data_penjualan" target="_blank" class="btn btn-primary" role="button">LIHAT</a></p>
+                  <p>Addesia Jaya</p> 
+                  <p><a href="<?php echo base_url().'admin/laporan/lap_data_penjualan'?>" target="_blank" class="btn btn-primary" role="button">LIHAT</a></p>
                   </div>
             </div>
             </div>
@@ -80,16 +80,16 @@
             <?php if($h=='2'){ ?> 
                   <div class="col-lg-12">
                 <h1 class="page-header" style="color:#fcc;">Selamat datang
-                    <small>Kasir</small>
+                    <small>Owner</small>
                 </h1>
             </div>
             <div class="col-md-4 portfolio-item">
             <div class="thumbnail">
                   <img src="<?php echo base_url().'assets/img/x.jpg'?>" alt="...">
                   <div class="caption">
-                  <h3>Laporan Penjualan</h3>
-                  <p>PT. NEW RMK</p>
-                  <p><a href="http://localhost/newrmk/admin/laporan/lap_data_penjualan" target="_blank" class="btn btn-primary" role="button">LIHAT</a></p>
+                  <h3>Laporan Pembelian</h3>
+                  <p>Addesia Jaya</p> 
+                  <p><a href="<?php echo base_url().'admin/laporan/lap_data_pembelian'?>" target="_blank" class="btn btn-primary" role="button">LIHAT</a></p>
                   </div>
             </div>
             </div>
@@ -98,8 +98,8 @@
                   <img src="<?php echo base_url().'assets/img/y.jpg'?>" alt="...">
                   <div class="caption">
                   <h3>Grafik Stok Barang</h3>
-                  <p>PT. NEW RMK</p>
-                  <p><a href="http://localhost/newrmk/admin/grafik/graf_stok_barang" target="_blank" class="btn btn-primary" role="button">LIHAT</a></p>
+                  <p>Addesia Jaya</p> 
+                  <p><a href="<?php echo base_url().'admin/grafik/graf_stok_barang'?>" target="_blank" class="btn btn-primary" role="button">LIHAT</a></p>
                   </div>
             </div>
             </div>
@@ -108,8 +108,8 @@
                   <img src="<?php echo base_url().'assets/img/z.jpg'?>" alt="...">
                   <div class="caption">
                   <h3>Laporan Stok Barang</h3>
-                  <p>PT. NEW RMK</p>
-                  <p><a href="http://localhost/newrmk/admin/laporan/lap_stok_barang" target="_blank" class="btn btn-primary" role="button">LIHAT</a></p>
+                  <p>Addesia Jaya</p> 
+                  <p><a href="<?php echo base_url().'admin/laporan/lap_stok_barang'?>" target="_blank" class="btn btn-primary" role="button">LIHAT</a></p>
                   </div>
             </div>
             </div>

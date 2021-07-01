@@ -20,7 +20,7 @@
     <td colspan="2" style="width:800px;paddin-left:20px;"><center><h4>LAPORAN PENJUALAN PERTAHUN <?php echo $b['tahun'];?></h4></center><br/></td>
 </tr>
 <tr>
-    <td colspan="2" style="width:800px;paddin-left:20px;"><center><h4>PT. NEW RMK</h4></center><br/></td>
+    <td colspan="2" style="width:800px;paddin-left:20px;"><center><h4>Addesia Jaya</h4></center><br/></td>
 </tr>
                        
 </table>
