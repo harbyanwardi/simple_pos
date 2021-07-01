@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 30 Jun 2021 pada 17.45
+-- Waktu pembuatan: 01 Jul 2021 pada 10.54
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.2.28
 
@@ -348,8 +348,8 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`user_id`, `user_nama`, `user_username`, `user_password`, `user_level`, `user_status`) VALUES
-(1, 'Yoga Permana', 'gaping', '65bafeb3c8669d6f638c09b95dd70fdd', '1', '1'),
-(2, 'Yoga', 'yoga', '807659cd883fc0a63f6ce615893b3558', '2', '1');
+(1, 'ADMIN', 'admin', '65bafeb3c8669d6f638c09b95dd70fdd', '1', '1'),
+(2, 'OWNER', 'owner', '807659cd883fc0a63f6ce615893b3558', '2', '1');
 
 --
 -- Indexes for dumped tables
