@@ -3,7 +3,7 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <li class="sidebar-brand"><a href="<?php echo base_url().'welcome'?>"><img src="<?php echo base_url().'assets/img/logonewrmk.png'?>" style="width:80px">  PT. YOU APP</a>
+                <li class="sidebar-brand"><a href="<?php echo base_url().'welcome'?>"><img src="<?php echo base_url().'assets/img/logo.png'?>" style="width:200px"></a>
                 </li>
                 <?php $h=$this->session->userdata('akses'); ?>
                 <?php $u=$this->session->userdata('user'); ?>
@@ -54,7 +54,7 @@
             <div class="content-header">
                 <h1>
                     <a id="menu-toggle" href="#" class="btn btn-default"><i class="fa fa-list"></i></a>
-                    <img src="<?php echo base_url().'assets/img/logonewrmk.png'?>" style="width:90px"> <small>Aplikasi Pembelian Material Atap</small>
+                    <img src="<?php echo base_url().'assets/img/logonewrmk.jpg'?>" style="width:90px"> <small>Aplikasi Pembelian Material Atap</small>
                 </h1>
             </div>
             <!-- Keep all page content within the page-content inset div! -->

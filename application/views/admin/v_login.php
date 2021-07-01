@@ -25,7 +25,7 @@
 				<div class="login-wrapper">
 			        <div class="box" style="margin-top:20%;">
 			            <div class="content-wrap">
-			                <img width="200px" src="<?php echo base_url().'assets/img/logonewrmk.png'?>"/>
+			                <img width="200px" src="<?php echo base_url().'assets/img/logonewrmk.jpg'?>"/>
 			                <p><?php echo $this->session->flashdata('msg');?></p>
 	                        <hr/>
 	                        <form action="<?php echo base_url().'administrator/cekuser'?>" method="post">
