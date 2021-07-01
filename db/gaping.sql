@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 01 Jul 2021 pada 10.54
+-- Waktu pembuatan: 01 Jul 2021 pada 11.38
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.2.28
 
@@ -67,23 +67,24 @@ CREATE TABLE `tbl_beli` (
   `beli_tanggal` date DEFAULT NULL,
   `beli_suplier_id` int(11) DEFAULT NULL,
   `beli_user_id` int(11) DEFAULT NULL,
-  `beli_kode` varchar(15) NOT NULL
+  `beli_kode` varchar(15) NOT NULL,
+  `state` int(10) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `tbl_beli`
 --
 
-INSERT INTO `tbl_beli` (`beli_nofak`, `beli_tanggal`, `beli_suplier_id`, `beli_user_id`, `beli_kode`) VALUES
-('90137153', '2019-05-01', 6, 1, 'A010519000001'),
-('12121331', '2019-04-30', 4, 1, 'A010519000002'),
-('1', '2019-04-26', 6, 1, 'A250419000001'),
-('1', '2019-04-26', 7, 1, 'A250419000002'),
-('1', '2019-04-26', 4, 1, 'A260419000003'),
-('1', '2019-04-27', 6, 1, 'A270419000001'),
-('2342332', '2019-04-29', 7, 1, 'A290419000001'),
-('K1123456', '2021-06-30', 7, 1, 'A300621000001'),
-('K1123457', '2021-06-29', 6, 1, 'A300621000002');
+INSERT INTO `tbl_beli` (`beli_nofak`, `beli_tanggal`, `beli_suplier_id`, `beli_user_id`, `beli_kode`, `state`) VALUES
+('90137153', '2019-05-01', 6, 1, 'A010519000001', 0),
+('12121331', '2019-04-30', 4, 1, 'A010519000002', 0),
+('1', '2019-04-26', 6, 1, 'A250419000001', 0),
+('1', '2019-04-26', 7, 1, 'A250419000002', 0),
+('1', '2019-04-26', 4, 1, 'A260419000003', 0),
+('1', '2019-04-27', 6, 1, 'A270419000001', 0),
+('2342332', '2019-04-29', 7, 1, 'A290419000001', 1),
+('K1123456', '2021-06-30', 7, 1, 'A300621000001', 1),
+('K1123457', '2021-06-29', 6, 1, 'A300621000002', 1);
 
 -- --------------------------------------------------------
 

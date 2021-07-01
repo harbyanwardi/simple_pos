@@ -34,7 +34,7 @@
    
             <div class="col-lg-12">
             <center><?php echo $this->session->flashdata('msg');?></center>
-                <h1 class="page-header">Pembelian
+                <h1 class="page-header">Pemesanan
                     <small>Barang</small>
                     
                 </h1>

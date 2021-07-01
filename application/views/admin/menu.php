@@ -24,7 +24,9 @@
                 </li>
                 <hr>
                 <li style="color:red">TRANSAKSI</li>
-                <li><a href="<?php echo base_url().'admin/pembelian'?>">Pembelian</a>
+                <li><a href="<?php echo base_url().'admin/pembelian'?>">Pemesanan</a>
+                </li>
+                <li><a href="<?php echo base_url().'admin/pembelian/pemesanan'?>">Pembelian</a>
                 </li>
                 <li><a href="<?php echo base_url().'admin/jurnal'?>">Jurnal</a>
                 <hr>

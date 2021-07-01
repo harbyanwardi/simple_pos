@@ -10,15 +10,40 @@ class Pembelian extends CI_Controller{
 		$this->load->model('m_barang');
 		$this->load->model('m_suplier');
 		$this->load->model('m_pembelian');
+		$this->load->model('m_laporan');
 	}
 	function index(){
-	if($this->session->userdata('akses')=='1'){
-		$x['sup']=$this->m_suplier->tampil_suplier();
-		$this->load->view('admin/v_pembelian',$x);
-	}else{
-        echo "Halaman tidak ditemukan";
-    }
+		if($this->session->userdata('akses')=='1'){
+			$x['sup']=$this->m_suplier->tampil_suplier();
+			$this->load->view('admin/v_pembelian',$x);
+		}else{
+	        echo "Halaman tidak ditemukan";
+	    }
 	}
+
+	function acc(){
+		if($this->session->userdata('akses')=='1'){
+			$id=$this->uri->segment(4);
+			$res =$this->m_laporan->acc_action($id);
+			if($res):
+				redirect('admin/pembelian/pemesanan');
+			endif;
+
+			//
+		}else{
+	        echo "Halaman tidak ditemukan";
+	    }
+	}
+
+	function pemesanan(){
+		if($this->session->userdata('akses')=='1'){
+			$x['data']=$this->m_laporan->get_data_pemesanan();
+			$this->load->view('admin/v_pemesanan',$x);
+		}else{
+	        echo "Halaman tidak ditemukan";
+	    }
+	}
+
 	function get_barang(){
 	if($this->session->userdata('akses')=='1'){
 		$kobar=$this->input->post('kode_brg');

@@ -50,11 +50,22 @@ class M_laporan extends CI_Model{
 	}
 	// PEMBELIAN
 	function get_data_pembelian(){
-		$hsl=$this->db->query("SELECT beli_nofak,DATE_FORMAT(beli_tanggal,'%d %M %Y') AS beli_tanggal,beli_suplier_id,d_beli_id,d_beli_barang_id,d_beli_harga,d_beli_jumlah,d_beli_total FROM tbl_beli JOIN tbl_detail_beli ON beli_nofak=d_beli_nofak ORDER BY beli_nofak DESC");
+		$hsl=$this->db->query("SELECT beli_nofak,DATE_FORMAT(beli_tanggal,'%d %M %Y') AS beli_tanggal,beli_suplier_id,d_beli_id,d_beli_barang_id,d_beli_harga,d_beli_jumlah,d_beli_total FROM tbl_beli JOIN tbl_detail_beli ON beli_nofak=d_beli_nofak WHERE tbl_beli.state=1 ORDER BY beli_nofak DESC");
 		return $hsl;
 	}
+
+	function get_acc_pemesanan($id){
+		$hsl=$this->db->query("SELECT * FROM tbl_beli WHERE beli_kode = $id  ORDER BY beli_nofak DESC");
+		return $hsl;
+	}
+
+	function get_data_pemesanan(){
+		$hsl=$this->db->query("SELECT * FROM tbl_beli JOIN tbl_suplier ON tbl_suplier.suplier_id = tbl_beli.beli_suplier_id ORDER BY beli_nofak DESC");
+		return $hsl;
+	}
+
 	function get_total_pembelian(){
-		$hsl=$this->db->query("SELECT beli_nofak,DATE_FORMAT(beli_tanggal,'%d %M %Y') AS beli_tanggal,beli_suplier_id,d_beli_id,d_beli_barang_id,d_beli_harga,d_beli_jumlah,sum(d_beli_total) as total FROM tbl_beli JOIN tbl_detail_beli ON beli_nofak=d_beli_nofak ORDER BY beli_nofak DESC");
+		$hsl=$this->db->query("SELECT beli_nofak,DATE_FORMAT(beli_tanggal,'%d %M %Y') AS beli_tanggal,beli_suplier_id,d_beli_id,d_beli_barang_id,d_beli_harga,d_beli_jumlah,sum(d_beli_total) as total FROM tbl_beli JOIN tbl_detail_beli ON beli_nofak=d_beli_nofak WHERE tbl_beli.state=1 ORDER BY beli_nofak DESC");
 		return $hsl;
 	}
 	//=========Laporan Laba rugi============
@@ -64,6 +75,12 @@ class M_laporan extends CI_Model{
 	}
 	function get_total_lap_laba_rugi($bulan){
 		$hsl=$this->db->query("SELECT DATE_FORMAT(jual_tanggal,'%M %Y') AS bulan,d_jual_barang_nama,d_jual_barang_satuan,d_jual_barang_harpok,d_jual_barang_harjul,(d_jual_barang_harjul-d_jual_barang_harpok) AS keunt,d_jual_qty,d_jual_diskon,SUM(((d_jual_barang_harjul-d_jual_barang_harpok)*d_jual_qty)-(d_jual_qty*d_jual_diskon)) AS total FROM tbl_jual JOIN tbl_detail_jual ON jual_nofak=d_jual_nofak WHERE DATE_FORMAT(jual_tanggal,'%M %Y')='$bulan'");
+		return $hsl;
+	}
+
+	function acc_action($id){
+		$user_id=$this->session->userdata('idadmin');
+		$hsl=$this->db->query("UPDATE tbl_beli SET state=1 WHERE beli_kode='$id'");
 		return $hsl;
 	}
 }
