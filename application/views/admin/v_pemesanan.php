@@ -6,12 +6,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Produk By Mfikri.com">
-    <meta name="author" content="M Fikri Setiadi">
+    <meta name="description" content="Produk For AsahiAPP">
+    <meta name="author" content="Harby Anwardi">
 
-    <title>Aplikasi Pembelian</title>
+    <title>APOTEK WEB</title>
     <?php 
-        $this->load->view('admin/yoga');
+        $this->load->view('admin/backside');
    ?>
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url().'assets/css/bootstrap.min.css'?>" rel="stylesheet">
@@ -47,7 +47,7 @@
                         <th style="text-align:center;width:40px;">No</th>
                         <th>No. Faktur</th>
                         <th>Tanggal</th>
-                        <th>Supplier</th>
+                       
                         <th>Kode</th>
                         <th style="width:140px;text-align:center;">Aksi</th>
                     </tr>
@@ -59,7 +59,7 @@
                         $no++;
                         $id=$a['beli_nofak'];
                         $tgl=$a['beli_tanggal'];
-                        $suplier=$a['suplier_nama'];
+                      
                         $kode=$a['beli_kode'];
                         $state=$a['state'];
                 ?>
@@ -67,7 +67,7 @@
                         <td style="text-align:center;"><?php echo $no;?></td>
                         <td><?php echo $id;?></td>
                         <td><?php echo $tgl;?></td>
-                        <td><?php echo $suplier;?></td>
+                        
                         <td><?php echo $kode;?></td>
                         <?php if($state==0) { ?>
                         <td style="text-align:center;">

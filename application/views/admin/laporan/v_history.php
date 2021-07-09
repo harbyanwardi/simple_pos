@@ -1,6 +1,6 @@
 <html lang="en" moznomarginboxes mozdisallowselectionprint>
 <head>
-    <title>laporan data stok barang</title>
+    <title>laporan data histori</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/laporan.css')?>"/>
 </head>
@@ -14,7 +14,7 @@
 
 <table border="0" align="center" style="width:800px; border:none;margin-top:5px;margin-bottom:0px;">
 <tr>
-    <td colspan="2" style="width:800px;paddin-left:20px;"><center><h4>LAPORAN STOK BARANG </h4></center><br/></td>
+    <td colspan="2" style="width:800px;paddin-left:20px;"><center><h4>LAPORAN HISTORI TRANSAKSI </h4></center><br/></td>
 </tr>
 <tr>
     <td colspan="2" style="width:800px;paddin-left:20px;"><center><h4>APOTEK WEB</h4></center><br/></td>
@@ -33,7 +33,7 @@
     $urut=0;
     $nomor=0;
     $group='-';
-    foreach($data->result_array()as $d){
+    foreach($barang->result_array()as $d){
     $nomor++;
     $urut++;
     if($group=='-' || $group!=$d['kategori_nama']){
@@ -63,6 +63,7 @@ $nomor=1;
         <tr>
                 <td style="text-align:center;vertical-align:top;text-align:center;"><?php echo $nomor; ?></td>
                 <td style="vertical-align:top;padding-left:5px;"><?php echo $d['barang_nama']; ?></td>
+                    
                 <td style="vertical-align:top;text-align:center;"><?php echo $d['barang_stok']; ?></td>  
         </tr>
         

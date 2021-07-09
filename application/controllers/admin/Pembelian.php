@@ -96,9 +96,11 @@ class Pembelian extends CI_Controller{
 		$nofak=$this->session->userdata('nofak');
 		$tglfak=$this->session->userdata('tglfak');
 		$suplier=$this->session->userdata('suplier');
-		if(!empty($nofak) && !empty($tglfak) && !empty($suplier)){
-			$beli_kode=$this->m_pembelian->get_kobel();
-			$order_proses=$this->m_pembelian->simpan_pembelian($nofak,$tglfak,$suplier,$beli_kode);
+		$beli_kode=$this->m_pembelian->get_kobel();
+		
+		if(!empty($nofak) && !empty($tglfak)){
+			// $beli_kode=$this->m_pembelian->get_kobel();
+			$order_proses=$this->m_pembelian->simpan_pembelian($nofak,$tglfak,$beli_kode);
 			if($order_proses){
 				$this->cart->destroy();
 				$this->session->unset_userdata('nofak');

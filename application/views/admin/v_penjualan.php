@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Produk By Mfikri.com">
-    <meta name="author" content="M Fikri Setiadi">
+    <meta name="author" content="harby">
 
-    <title>Transaksi Pembelian</title>
-
+    <title>APOTEK WEB</title>
+    <?php 
+        $this->load->view('admin/backside');
+   ?>
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url().'assets/css/bootstrap.min.css'?>" rel="stylesheet">
-	<link href="<?php echo base_url().'assets/css/style.css'?>" rel="stylesheet">
-	<link href="<?php echo base_url().'assets/css/font-awesome.css'?>" rel="stylesheet">
+    <link href="<?php echo base_url().'assets/css/style.css'?>" rel="stylesheet">
+    <link href="<?php echo base_url().'assets/css/font-awesome.css'?>" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="<?php echo base_url().'assets/css/4-col-portfolio.css'?>" rel="stylesheet">
     <link href="<?php echo base_url().'assets/css/dataTables.bootstrap.min.css'?>" rel="stylesheet">
     <link href="<?php echo base_url().'assets/css/jquery.dataTables.min.css'?>" rel="stylesheet">
     <link href="<?php echo base_url().'assets/dist/css/bootstrap-select.css'?>" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/css/bootstrap-datetimepicker.min.css'?>">
 </head>
-
 <body>
 
     <!-- Navigation -->
@@ -38,8 +37,8 @@
             <div class="col-lg-12">
             <center><?php echo $this->session->flashdata('msg');?></center>
                 <h1 class="page-header">Transaksi
-                    <small>Penjualan (Eceran)</small>
-                    <a href="#" data-toggle="modal" data-target="#largeModal" class="pull-right"><small>Cari Produk!</small></a>
+                    <small>Penjualan</small>
+                    <a href="#" data-toggle="modal" data-target="#largeModal" class="pull-right"><small>Cari Barang</small></a>
                 </h1> 
             </div>
         </div>
@@ -62,13 +61,13 @@
             <table class="table table-bordered table-condensed" style="font-size:11px;margin-top:10px;">
                 <thead>
                     <tr>
-                        <th>Kode Barang</th>
-                        <th>Nama Barang</th>
-                        <th style="text-align:center;">Satuan</th>
-                        <th style="text-align:center;">Harga(Rp)</th>
-                        <th style="text-align:center;">Diskon(Rp)</th>
-                        <th style="text-align:center;">Qty</th>
-                        <th style="text-align:center;">Sub Total</th>
+                        <th style="width:100px;">Kode Barang</th>
+                        <th style="width:120px;">Nama Barang</th>
+                        <th style="text-align:center;width:120px;">Satuan</th>
+                        <th style="text-align:center;width:120px;">Harga(Rp)</th>
+                        
+                        <th style="text-align:center;width:100px;">Qty</th>
+                        <th style="text-align:center; width:180px;">Sub Total</th>
                         <th style="width:100px;text-align:center;">Aksi</th>
                     </tr>
                 </thead>
@@ -81,7 +80,7 @@
                          <td><?=$items['name'];?></td>
                          <td style="text-align:center;"><?=$items['satuan'];?></td>
                          <td style="text-align:right;"><?php echo number_format($items['amount']);?></td>
-                         <td style="text-align:right;"><?php echo number_format($items['disc']);?></td>
+                        <!--  <td style="text-align:right;"><?php echo number_format($items['disc']);?></td> -->
                          <td style="text-align:center;"><?php echo number_format($items['qty']);?></td>
                          <td style="text-align:right;"><?php echo number_format($items['subtotal']);?></td>
                         
@@ -201,7 +200,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p style="text-align:center;">Copyright &copy; <?php echo '2017';?> by M Fikri Setiadi</p>
+                    <p style="text-align:center;">Copyright &copy; <?php echo '2017';?> by Harby Anwardi</p>
                 </div>
             </div>
             <!-- /.row -->

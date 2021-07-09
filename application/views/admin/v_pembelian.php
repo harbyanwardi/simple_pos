@@ -6,12 +6,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Produk By Mfikri.com">
-    <meta name="author" content="M Fikri Setiadi">
+    <meta name="description" content="Produk For AsahiAPP">
+    <meta name="author" content="Harby Anwardi">
 
-    <title>Aplikasi Pembelian</title>
+    <title>APOTEK WEB</title>
     <?php
-    $this->load->view('admin/yoga'); 
+    $this->load->view('admin/backside'); 
     ?>
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url().'assets/css/bootstrap.min.css'?>" rel="stylesheet">
@@ -49,7 +49,7 @@
                 <tr>
                     <th style="width:100px;padding-bottom:5px;">No Faktur</th>
                     <th style="width:300px;padding-bottom:5px;"><input type="text" name="nofak" value="<?php echo $this->session->userdata('nofak');?>" class="form-control input-sm" style="width:200px;" required></th>
-                    <th style="width:90px;padding-bottom:5px;">Suplier</th>
+                    <!-- <th style="width:90px;padding-bottom:5px;">Suplier</th>
                     <td style="width:350px;">
                     <select name="suplier" class="selectpicker show-tick form-control" data-live-search="true" title="Pilih Suplier" data-width="100%" required>
                         <?php foreach ($sup->result_array() as $i) {
@@ -64,7 +64,7 @@
                                 echo "<option value='$id_sup'>$nm_sup - $al_sup - $notelp_sup</option>";
                         }?>
                     </select>
-                    </td>
+                    </td> -->
                 </tr>
                 <tr>
                     <th>Tanggal</th>

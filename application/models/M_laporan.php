@@ -4,6 +4,12 @@ class M_laporan extends CI_Model{
 		$hsl=$this->db->query("SELECT kategori_id,kategori_nama,barang_nama,barang_stok FROM tbl_kategori JOIN tbl_barang ON kategori_id=barang_kategori_id GROUP BY kategori_id,barang_nama");
 		return $hsl;
 	}
+
+	function get_history_barang(){
+		$hsl=$this->db->query("SELECT kategori_id,kategori_nama,barang_nama,barang_stok FROM tbl_kategori JOIN tbl_barang ON kategori_id=barang_kategori_id GROUP BY kategori_id,barang_nama");
+		return $hsl;
+	}
+
 	function get_data_barang(){
 		$hsl=$this->db->query("SELECT kategori_id,barang_id,kategori_nama,barang_nama,barang_satuan,barang_harjul,barang_stok FROM tbl_kategori JOIN tbl_barang ON kategori_id=barang_kategori_id GROUP BY kategori_id,barang_nama");
 		return $hsl;
@@ -60,7 +66,7 @@ class M_laporan extends CI_Model{
 	}
 
 	function get_data_pemesanan(){
-		$hsl=$this->db->query("SELECT * FROM tbl_beli JOIN tbl_suplier ON tbl_suplier.suplier_id = tbl_beli.beli_suplier_id ORDER BY beli_nofak DESC");
+		$hsl=$this->db->query("SELECT * FROM tbl_beli ORDER BY beli_nofak DESC");
 		return $hsl;
 	}
 

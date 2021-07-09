@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/laporan.css')?>"/>
 </head>
-<body onload="window.print()">
+<!-- <body onload="window.print()"> -->
 <div id="laporan">
 <table align="center" style="width:900px; border-bottom:3px double;border-top:none;border-right:none;border-left:none;margin-top:5px;margin-bottom:20px;">
 <!--<tr>
@@ -14,10 +14,10 @@
 
 <table border="0" align="center" style="width:800px; border:none;margin-top:5px;margin-bottom:0px;">
 <tr>
-    <td colspan="2" style="width:800px;paddin-left:20px;"><center><h4>LAPORAN PENJUALAN GAS INDUSTRI</h4></center><br/></td>
+    <td colspan="2" style="width:800px;paddin-left:20px;"><center><h4>LAPORAN PENJUALAN APOTEK WEB</h4></center><br/></td>
 </tr>
 <tr>
-    <td colspan="2" style="width:800px;paddin-left:20px;"><center><h4>Addesia Jaya</h4></center><br/></td>
+    <td colspan="2" style="width:800px;paddin-left:20px;"><center><h4>APOTEK WEB</h4></center><br/></td>
 </tr>
                        
 </table>
@@ -88,7 +88,7 @@ $no=0;
 </table>
 <table align="center" style="width:800px; border:none;margin-top:5px;margin-bottom:20px;">
     <tr>
-        <td align="right">Sukabumi, <?php echo date('d-M-Y')?></td>
+        <td align="right">Jakarta, <?php echo date('d-M-Y')?></td>
     </tr>
     <tr>
         <td align="right"></td>

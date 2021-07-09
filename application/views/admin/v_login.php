@@ -3,8 +3,8 @@
   <head>
     <title>Masuk</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Produk By Mfikri.com">
-    <meta name="author" content="M Fikri Setiadi">
+	<meta name="description" content="Produk For AsahiAPP">
+    <meta name="author" content="Harby Anwardi">
     <!-- Bootstrap -->
     <link href="<?php echo base_url().'assets/css/bootstrap.min.css'?>" rel="stylesheet">
     <!-- styles -->
@@ -25,7 +25,7 @@
 				<div class="login-wrapper">
 			        <div class="box" style="margin-top:20%;">
 			            <div class="content-wrap">
-			                <img width="200px" src="<?php echo base_url().'assets/img/logonewrmk.jpg'?>"/>
+			                
 			                <p><?php echo $this->session->flashdata('msg');?></p>
 	                        <hr/>
 	                        <form action="<?php echo base_url().'administrator/cekuser'?>" method="post">

@@ -1,9 +1,9 @@
 <?php
 class M_pembelian extends CI_Model{
 
-	function simpan_pembelian($nofak,$tglfak,$suplier,$beli_kode){
+	function simpan_pembelian($nofak,$tglfak,$beli_kode){
 		$idadmin=$this->session->userdata('idadmin');
-		$this->db->query("INSERT INTO tbl_beli (beli_nofak,beli_tanggal,beli_suplier_id,beli_user_id,beli_kode) VALUES ('$nofak','$tglfak','$suplier','$idadmin','$beli_kode')");
+		$this->db->query("INSERT INTO tbl_beli (beli_nofak,beli_tanggal,beli_user_id,beli_kode) VALUES ('$nofak','$tglfak','$idadmin','$beli_kode')");
 		foreach ($this->cart->contents() as $item) {
 			$data=array(
 				'd_beli_nofak' 		=>	$nofak,
@@ -19,7 +19,8 @@ class M_pembelian extends CI_Model{
 		return true;
 	}
 	function get_kobel(){
-		$q = $this->db->query("SELECT MAX(RIGHT(beli_kode,6)) AS kd_max FROM tbl_beli WHERE DATE(beli_tanggal)=CURDATE()");
+		// $q = $this->db->query("SELECT MAX(RIGHT(beli_kode,6)) AS kd_max FROM tbl_beli WHERE DATE(beli_tanggal)=CURDATE()");
+		$q = $this->db->query("SELECT MAX(RIGHT(beli_kode,6)) AS kd_max FROM tbl_beli");
         $kd = "";
         if($q->num_rows()>0){
             foreach($q->result() as $k){

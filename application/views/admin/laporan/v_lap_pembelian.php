@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/laporan.css')?>"/>
 </head>
-<body onload="window.print()">
+<!-- <body onload="window.print()"> -->
 <div id="laporan">
 <table align="center" style="width:900px; border-bottom:3px double;border-top:none;border-right:none;border-left:none;margin-top:5px;margin-bottom:20px;">
 <!--<tr>
@@ -17,7 +17,7 @@
     <td colspan="2" style="width:800px;paddin-left:20px;"><center><h4>LAPORAN PEMBELIAN</h4></center><br/></td>
 </tr>
 <tr>
-    <td colspan="2" style="width:800px;paddin-left:20px;"><center><h4>Addesia Jaya</h4></center><br/></td>
+    <td colspan="2" style="width:800px;paddin-left:20px;"><center><h4>APOTEK WEB</h4></center><br/></td>
 </tr>
                        
 </table>
@@ -34,7 +34,7 @@
         <th style="width:50px;">No</th>
         <th>No Faktur</th>
         <th>Tanggal</th>
-        <th>Suplier ID</th>
+       <!--  <th>Suplier ID</th> -->
         <th>Barang ID</th>
         <th>Harga Beli</th>
         <th>Qty</th>
@@ -48,7 +48,7 @@ $no=0;
         $no++;
         $nofak=$i['beli_nofak'];
         $tgl=$i['beli_tanggal'];
-        $beli_suplier=$i['beli_suplier_id'];
+        // $beli_suplier=$i['beli_suplier_id'];
         $beli_barang=$i['d_beli_barang_id'];
         $beli_harga=$i['d_beli_harga'];
         $beli_qty=$i['d_beli_jumlah'];
@@ -58,7 +58,7 @@ $no=0;
         <td style="text-align:center;"><?php echo $no;?></td>
         <td style="padding-left:5px;"><?php echo $nofak;?></td>
         <td style="text-align:center;"><?php echo $tgl;?></td>
-        <td style="text-align:center;"><?php echo $beli_suplier;?></td>
+        <!-- <td style="text-align:center;"><?php echo $beli_suplier;?></td> -->
         <td style="text-align:left;"><?php echo $beli_barang;?></td>
         <td style="text-align:right;"><?php echo 'Rp '.number_format($beli_harga);?></td>
         <td style="text-align:center;"><?php echo $beli_qty;?></td>

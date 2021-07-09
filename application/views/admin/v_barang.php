@@ -6,11 +6,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="YogaGAPING">
+    <meta name="author" content="harby">
 
-    <title>Aplikasi Pembelian</title>
+    <title>APOTEK WEB</title>
     <?php 
-        $this->load->view('admin/yoga');
+        $this->load->view('admin/backside');
    ?>
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url().'assets/css/bootstrap.min.css'?>" rel="stylesheet">
@@ -50,6 +50,8 @@
                         <th>Satuan</th>
                         <th>Harga Pokok</th>
                         <th>Harga Jual</th>
+                        <th>Persentase Keuntungan</th>
+                        <th>Selisih Keuntungan</th>
                         <th>Stok</th>
                         <th>Min Stok</th>
                         <th>Kategori</th>
@@ -65,7 +67,9 @@
                         $nm=$a['barang_nama'];
                         $satuan=$a['barang_satuan'];
                         $harpok=$a['barang_harpok'];
-                        $harjul_grosir=$a['barang_harjul_grosir'];
+                        $persentase=$a['persentase_keuntungan'];
+                        $selisih=$a['selisih'];
+                        $harjul=$a['barang_harjul'];
                         $stok=$a['barang_stok'];
                         $min_stok=$a['barang_min_stok'];
                         $kat_id=$a['barang_kategori_id'];
@@ -77,7 +81,9 @@
                         <td><?php echo $nm;?></td>
                         <td style="text-align:center;"><?php echo $satuan;?></td>
                         <td style="text-align:right;"><?php echo 'Rp '.number_format($harpok);?></td>
-                        <td style="text-align:right;"><?php echo 'Rp '.number_format($harjul_grosir);?></td>
+                        <td style="text-align:right;"><?php echo 'Rp '.number_format($harjul);?></td>
+                        <td style="text-align:center;"><?php echo $persentase;?> %</td>
+                        <td style="text-align:right;"><?php echo 'Rp '.number_format($selisih);?></td>
                         <td style="text-align:center;"><?php echo $stok;?></td>
                         <td style="text-align:center;"><?php echo $min_stok;?></td>
                         <td><?php echo $kat_nama;?></td>
@@ -159,7 +165,7 @@
                     <div class="form-group">
                         <label class="control-label col-xs-3" >Harga Jual</label>
                         <div class="col-xs-9">
-                            <input name="harjul_grosir" class="harjul form-control" type="text" placeholder="Harga Jual..." style="width:335px;">
+                            <input name="harjul" class="harjul form-control" type="text" placeholder="Harga Jual..." style="width:335px;">
                         </div>
                     </div>
 
@@ -196,6 +202,7 @@
                         $nm=$a['barang_nama'];
                         $satuan=$a['barang_satuan'];
                         $harpok=$a['barang_harpok'];
+                        $harjul=$a['barang_harjul'];
                         $stok=$a['barang_stok'];
                         $min_stok=$a['barang_min_stok'];
                         $kat_id=$a['barang_kategori_id'];
@@ -243,7 +250,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                       <!--  <div class="form-group">
                             <label class="control-label col-xs-3" >Satuan</label>
                             <div class="col-xs-9">
                                  <select name="satuan" class="selectpicker show-tick form-control" data-live-search="true" title="Pilih Satuan" data-width="80%" placeholder="Pilih Satuan" required>
@@ -270,7 +277,23 @@
                                     <?php endif;?>
                                  </select>
                             </div>
+                        </div> -->
+                        <div class="form-group">
+                        <label class="control-label col-xs-3" >Satuan</label>
+                        <div class="col-xs-9">
+                             <select name="satuan" class="selectpicker show-tick form-control" data-live-search="true" title="Pilih Satuan" data-width="80%" placeholder="Pilih Satuan" required>
+                               
+                             <?php foreach ($data2->result_array() as $s2) {
+                                $id_sat=$s2['satuan_id'];
+                                $nm_sat=$s2['satuan_nama'];
+                                if($satuan == $nm_sat) {
+                            ?><option selected value="<?php echo $nm_sat;?>"><?php echo $nm_sat;?></option>
+                                <?php } else { ?>
+                                    <option value="<?php echo $nm_sat;?>"><?php echo $nm_sat;?></option>
+                                <?php } }?>
+                             </select>
                         </div>
+                    </div>
 
                         <div class="form-group">
                             <label class="control-label col-xs-3" >Harga Pokok</label>
@@ -284,7 +307,7 @@
                         <div class="form-group">
                             <label class="control-label col-xs-3" >Harga Jual</label>
                             <div class="col-xs-9">
-                                <input name="harjul_grosir" class="harjul form-control" type="text" value="<?php echo $harjul_grosir;?>" placeholder="Harga Jual Grosir..." style="width:335px;" required>
+                                <input name="harjul" class="harjul form-control" type="text" value="<?php echo $harjul;?>" placeholder="Harga Jual Grosir..." style="width:335px;" required>
                             </div>
                         </div>
 

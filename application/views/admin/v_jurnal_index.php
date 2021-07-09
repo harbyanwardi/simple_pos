@@ -6,11 +6,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="YogaGAPING">
+    <meta name="author" content="harby">
 
-    <title>Aplikasi Pembelian</title>
+    <title>APOTEK WEB</title>
     <?php 
-        $this->load->view('admin/yoga');
+        $this->load->view('admin/backside');
    ?>
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url().'assets/css/bootstrap.min.css'?>" rel="stylesheet">
